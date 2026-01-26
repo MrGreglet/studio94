@@ -1,0 +1,429 @@
+/* Brushstroke SVG background for warmth and creativity */
+.studio-brush-bg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  height: 120px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+main {
+  position: relative;
+  z-index: 3;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+/*
+  Palette: warm, earthy, and soft for a homely, welcoming feel
+  No bright blues, only gentle sand, clay, and off-white tones
+*/
+:root {
+  --bg: #F8F5F2;         /* warm off-white background */
+  --card: #F5ECE3;        /* sand/clay card background */
+  --text: #3B2F28;        /* deep brown for warmth */
+  --subtle: #7C6F62;      /* muted brown-grey for secondary text */
+  --accent: #C2A080;      /* soft clay accent */
+  --accent2: #E3D5C3;     /* lighter sand accent */
+  --radius: 18px;         /* gentle rounding for tactile feel */
+  --shadow: 0 6px 32px rgba(60,40,20,0.07); /* soft, diffuse shadow */
+}
+
+* { box-sizing: border-box; }
+
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  /* Layered gradients for warmth and tactile depth */
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, var(--accent2) 0%, transparent 100%), /* sand highlight */
+    radial-gradient(ellipse 120% 80% at 50% 100%, #f3e7d3 0%, transparent 100%), /* clay shadow at bottom */
+    linear-gradient(120deg, var(--bg) 70%, var(--accent2) 100%); /* base gradient */
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  line-height: 1.7;
+  position: relative;
+  /* Faint paper texture using repeating linear gradients */
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  /* Texture overlay */
+  /* This effect is subtle and won't distract from content */
+  box-shadow: 0 0 0 1px rgba(227,213,195,0.03) inset;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3.5rem 1rem 2rem 1rem;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  gap: 2.5rem;
+}
+
+.modern-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+  border: none;
+  margin: 0 auto 2.5rem auto;
+  /* Soft border for tactile, physical feel */
+  border: 1.5px solid var(--accent2);
+}
+
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 0.01em; /* gentler, more open */
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  /* More breathing room for calmness */
+}
+
+.subtitle {
+  color: var(--subtle);
+  font-size: 1.13rem;
+  font-weight: 400;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: 0.03em;
+  text-transform: none; /* softer, less corporate */
+}
+
+.modern-divider {
+  width: 44px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 2px;
+  margin: 0 auto 1.2rem auto;
+  opacity: 0.7;
+  /* Subtle, tactile accent instead of a hard line */
+}
+
+.modern-status {
+  color: var(--subtle);
+  font-size: 1.12rem;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.8;
+  background: rgba(224, 210, 192, 0.18); /* gentle tactile highlight */
+  border-radius: 10px;
+  padding: 0.7rem 0.5rem;
+}
+
+.modern-cta {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.8em 2.1em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(194,160,128,0.08);
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+  border: none;
+  /* Soft, tactile button instead of a hard CTA */
+}
+.modern-cta:hover {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(194,160,128,0.16);
+}
+
+.about-section {
+  max-width: 480px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(60,40,20,0.04);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  /* Feels more like a soft, physical space */
+}
+.about-section h2 {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+.about-section p {
+  color: var(--subtle);
+  font-size: 1.07rem;
+  margin: 0 0 1.2rem 0;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.social-links a svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  transition: stroke 0.18s, transform 0.18s;
+}
+.social-links a:hover svg {
+  stroke: var(--text);
+  transform: scale(1.12);
+}
+
+.modern-footer {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+  padding: 1.2rem 1.5rem 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.98rem;
+  color: var(--subtle);
+  background: none;
+  border-top: 1px solid var(--accent2);
+  border-radius: 0 0 18px 18px;
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    /* Layered gradients for warmth and tactile depth */
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 20%, var(--accent2) 0%, transparent 100%), /* sand highlight */
+      radial-gradient(ellipse 120% 80% at 50% 100%, #f3e7d3 0%, transparent 100%), /* clay shadow at bottom */
+      linear-gradient(120deg, var(--bg) 70%, var(--accent2) 100%); /* base gradient */
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    line-height: 1.7;
+    position: relative;
+    /* Faint paper texture using repeating linear gradients */
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    /* Texture overlay */
+    /* This effect is subtle and won't distract from content */
+    box-shadow: 0 0 0 1px rgba(227,213,195,0.03) inset;
+  }
+    font-size: 1rem;
+    padding: 0.7em 1.5em;
+  }
+  .modern-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+    font-size: 0.93rem;
+  }
+}
+
+* { box-sizing: border-box; }
+
+/* Hero background */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.modern-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3.5rem 2.25rem 2.5rem 2.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: none;
+  margin-bottom: 2.5rem;
+}
+
+ h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.modern-divider {
+  width: 48px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.subtitle {
+  color: var(--subtle);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.modern-status {
+  color: var(--subtle);
+  font-size: 1.08rem;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.modern-cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 0.85em 2.2em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  transition: background 0.18s, box-shadow 0.18s;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+  border: none;
+}
+.modern-cta:hover {
+  background: #1742a0;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.18);
+}
+/* About section */
+.about-section {
+  max-width: 420px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  background: #fff8;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(24,26,27,0.04);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+.about-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.about-section p {
+  color: var(--subtle);
+  font-size: 1.05rem;
+  margin: 0 0 1.2rem 0;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.social-links a svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  transition: stroke 0.18s, transform 0.18s;
+}
+.social-links a:hover svg {
+  stroke: #1742a0;
+  transform: scale(1.12);
+}
+
+/* Footer */
+.modern-footer {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+  padding: 1.2rem 1.5rem 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.98rem;
+  color: var(--subtle);
+  background: none;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0 0 18px 18px;
+  box-sizing: border-box;
+}
+.modern-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.modern-footer a:hover {
+  color: #1742a0;
+}
+
+@media (max-width: 600px) {
+  .modern-card {
+    padding: 1.25rem;
+  }
+  .about-section {
+    padding: 1rem 0.5rem 0.8rem 0.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .modern-cta {
+    font-size: 1rem;
+    padding: 0.7em 1.5em;
+  }
+  .modern-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+    font-size: 0.93rem;
+  }
+}
